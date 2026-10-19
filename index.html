@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NumberQuest | Guessing Game</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+
+        <div class="logo">
+            <span class="logo-icon">N</span>
+            <span>NumberQuest</span>
+        </div>
+
+        <span class="header-text">NUMBER CHALLENGE</span>
+
+    </header>
+
+
+    <!-- Main Game -->
+    <main class="container">
+
+        <section class="game-card">
+
+            <!-- Heading -->
+            <div class="heading">
+
+                <div>
+                    <span class="eyebrow">THINK. GUESS. WIN.</span>
+
+                    <h1>Find the Hidden Number</h1>
+
+                    <p>Guess a number between 1 and 100.</p>
+                </div>
+
+                <div class="question-icon">?</div>
+
+            </div>
+
+
+            <!-- Statistics -->
+            <div class="stats">
+
+                <div class="stat-box">
+                    <span>ATTEMPTS LEFT</span>
+                    <strong id="attemptsLeft">7</strong>
+                </div>
+
+                <div class="stat-box">
+                    <span>YOUR GUESSES</span>
+                    <strong id="totalGuesses">0</strong>
+                </div>
+
+                <div class="stat-box">
+                    <span>BEST SCORE</span>
+                    <strong id="bestScore">—</strong>
+                </div>
+
+            </div>
+
+
+            <!-- Secret Number Display -->
+            <div class="number-box">
+
+                <span class="small-heading">SECRET NUMBER</span>
+
+                <h2 id="hiddenNumber">?</h2>
+
+                <p id="rangeText">Possible range: 1–100</p>
+
+            </div>
+
+
+            <!-- Guess Input -->
+            <form id="guessForm">
+
+                <label for="guessInput">Enter your guess</label>
+
+                <div class="input-row">
+
+                    <input
+                        type="number"
+                        id="guessInput"
+                        min="1"
+                        max="100"
+                        step="1"
+                        placeholder="Enter a number..."
+                        required
+                    >
+
+                    <button type="submit" id="guessButton">
+                        Guess →
+                    </button>
+
+                </div>
+
+            </form>
+
+
+            <!-- Clue Message -->
+            <div class="feedback" id="feedback" role="status"
+                 aria-live="polite">
+
+                <span id="feedbackIcon">✦</span>
+
+                <span id="feedbackText">
+                    Make your first guess to receive a clue.
+                </span>
+
+            </div>
+
+
+            <!-- Guess History -->
+            <div class="history-section">
+
+                <div class="history-heading">
+                    <h3>Guess History</h3>
+                    <span>Latest first</span>
+                </div>
+
+                <div id="guessHistory" class="guess-history">
+                    <span class="empty-message">
+                        Your guesses will appear here.
+                    </span>
+                </div>
+
+            </div>
+
+
+            <!-- Game Controls -->
+            <div class="controls">
+
+                <button
+                    type="button"
+                    id="restartButton"
+                    class="restart-button"
+                >
+                    ↻ New Game
+                </button>
+
+                <div class="difficulty">
+
+                    <label for="difficulty">Level</label>
+
+                    <select id="difficulty">
+
+                        <option value="10">Easy · 10 attempts</option>
+
+                        <option value="7" selected>
+                            Medium · 7 attempts
+                        </option>
+
+                        <option value="5">Hard · 5 attempts</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+            <p class="footer-text">
+                Every guess brings you closer to the answer.
+            </p>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
